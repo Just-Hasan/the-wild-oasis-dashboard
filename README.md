@@ -1,2 +1,8 @@
-# the-wild-oasis-dashboard
- The Wild Oasis dashboard is a fully operating web applications created to store informations regarding bookings, admin users, and guests for the Wild Oasis Hotel Booking System
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
