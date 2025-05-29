@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import Input from "../../ui/Input";
@@ -10,6 +10,12 @@ export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, isLogin } = useLogin();
+
+  useEffect(() => {
+    // Reset the form when the component mounts
+    setEmail("hasan@example.com");
+    setPassword("hasan123");
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -34,6 +40,7 @@ export default function LoginForm() {
           // This makes this form better for password managers
           autoComplete="username"
           value={email}
+          defaultValue={"hasan@example.com"}
           disabled={isLogin}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -42,6 +49,7 @@ export default function LoginForm() {
         <Input
           type="password"
           id="password"
+          defaultValue={"hasan123"}
           autoComplete="current-password"
           value={password}
           disabled={isLogin}
